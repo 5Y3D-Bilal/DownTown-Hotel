@@ -73,9 +73,9 @@ const Header: React.FC<HeaderProps> = () => {
                 <li className='hover:-translate-y-2 duration-500 transition-all'>
                     <Link href={'/contact'}>Contact</Link>
                 </li>
-                {/* <li onClick={() => signOut()}>
+                <li onClick={() => signOut()}>
                     d
-                </li> */}
+                </li>
             </ul>
         </header>
     )
