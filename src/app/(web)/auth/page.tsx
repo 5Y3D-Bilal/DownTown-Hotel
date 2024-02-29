@@ -3,8 +3,8 @@ import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
-import { signUp  } from "next-auth-sanity/client"
-import { signIn, useSession , signOut} from "next-auth/react"
+import { signUp } from "next-auth-sanity/client"
+import { signIn, useSession, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 
 type pageProps = {
@@ -18,7 +18,7 @@ const DefaultFormData_forInitialStateofuseState = {
     password: ''
 }
 
-const auth: React.FC<pageProps> = () => {
+const auth = () => {
     const inputStyling: string = 'border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none'
 
     // For Date 
