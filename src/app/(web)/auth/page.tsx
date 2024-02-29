@@ -5,11 +5,11 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 import { signUp } from "next-auth-sanity/client"
 import { signIn, useSession, signOut } from "next-auth/react"
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 
 
-export default function auth() {
+export default function Auth() {
     // Initial form date State
     const DefaultFormData_forInitialStateofuseState = {
         email: '',
