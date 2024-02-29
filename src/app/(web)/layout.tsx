@@ -3,10 +3,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { League_Spartan } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
-import ThemeProvider from '@/components/ThemeProvider/ThemeProvider'
+import ThemeProvider from '@/components/CLIENT/ThemeProvider/ThemeProvider'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { NextAuthProvider } from '@/components/AuthProvider/AuthProvider'
+import { NextAuthProvider } from '@/components/CLIENT/AuthProvider/AuthProvider'
 
 const inter = League_Spartan({ subsets: ['latin'] })
 

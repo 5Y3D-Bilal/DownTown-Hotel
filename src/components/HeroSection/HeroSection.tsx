@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CountUpNumber from "../CLIENT/CountUpNumber/CountUpNumber";
 
 type HeroSectionProps = {
 
@@ -22,24 +23,19 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                     <p className="text-xs lg:text-lg text-center">
                         Basic Room
                     </p>
-                    <p className="md:font-bold font-medium text-lg xl:text-5xl">
-                        + 20
-                    </p>
+                    <CountUpNumber duration={3000} countTill={200} />
                 </div>
                 <div className="flex gap-3 flex-col items-center justify-center">
                     <p className="text-xs lg:text-lg text-center">
                         Luxury Room
                     </p>
-                    <p className="md:font-bold font-medium text-lg xl:text-5xl">
-                        + 10
-                    </p>
+                    <CountUpNumber duration={3000} countTill={25} />
+
                 </div> <div className="flex gap-3 flex-col items-center justify-center">
                     <p className="text-xs lg:text-lg text-center">
                         Suite
                     </p>
-                    <p className="md:font-bold font-medium text-lg xl:text-5xl">
-                        + 50
-                    </p>
+                    <CountUpNumber duration={3000} countTill={90} />
                 </div>
             </div>
         </div>
