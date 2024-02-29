@@ -18,7 +18,7 @@ const DefaultFormData_forInitialStateofuseState = {
     password: ''
 }
 
-const auth = () => {
+export default function auth() {
     const inputStyling: string = 'border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none'
 
     // For Date 
@@ -115,4 +115,3 @@ const auth = () => {
         </div>
     </section>
 }
-export default auth;
