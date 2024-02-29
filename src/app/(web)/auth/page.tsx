@@ -5,20 +5,18 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 import { signUp } from "next-auth-sanity/client"
 import { signIn, useSession, signOut } from "next-auth/react"
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
-type pageProps = {
 
-};
-
-// Initial form date State
-const DefaultFormData_forInitialStateofuseState = {
-    email: '',
-    name: '',
-    password: ''
-}
 
 export default function auth() {
+    // Initial form date State
+    const DefaultFormData_forInitialStateofuseState = {
+        email: '',
+        name: '',
+        password: ''
+    }
+
     const inputStyling: string = 'border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none'
 
     // For Date 
@@ -66,52 +64,55 @@ export default function auth() {
         }
     }
 
-    return <section className='container mx-auto'>
-        <div className='p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto'>
-            <div className="flex mb-8 flex-col md:flex-row items-center justify-between">
-                <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl">Create an account</h1>
-                <p>or</p>
-                <span className='inline-flex items-center'>
-                    <AiFillGithub onClick={loginhandler} className='mr-3 text-4xl cursor-pointer text-black dark:text-white' />
-                    <hr className='w-0.5 bg-black h-7 dark:bg-white' />
-                    <FcGoogle onClick={loginhandler} className='ml-3 text-4xl cursor-pointer' />
-                </span>
+    return (
+        <section className='container mx-auto'>
+            <div className='p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto'>
+                <div className="flex mb-8 flex-col md:flex-row items-center justify-between">
+                    <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl">Create an account</h1>
+                    <p>or</p>
+                    <span className='inline-flex items-center'>
+                        <AiFillGithub onClick={loginhandler} className='mr-3 text-4xl cursor-pointer text-black dark:text-white' />
+                        <hr className='w-0.5 bg-black h-7 dark:bg-white' />
+                        <FcGoogle onClick={loginhandler} className='ml-3 text-4xl cursor-pointer' />
+                    </span>
+                </div>
+
+                <form className='space-y-4 md:space-y-6' onSubmit={handleSubmit_ForInputData}>
+                    {/* Input Fields */}
+                    <input type="email"
+                        name='email'
+                        placeholder="example@gmail.com"
+                        required
+                        className={inputStyling}
+                        value={formData.email}
+                        onChange={handleInput_onChange}
+                    />
+                    <input
+                        type="text"
+                        name='name'
+                        placeholder="name"
+                        required
+                        className={inputStyling}
+                        value={formData.name}
+                        onChange={handleInput_onChange}
+                    />
+                    <input
+                        type="password"
+                        name='password'
+                        placeholder="*******"
+                        required minLength={6}
+                        className={inputStyling}
+                        value={formData.password}
+                        onChange={handleInput_onChange}
+                    />
+                    {/* Sign Up Btn */}
+                    <button type='submit'
+                        className='w-full bg-tertiary-light focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center'>Sign Up</button>
+                </form>
+
+                <button className='text-blue-700 underline' onClick={loginhandler}>Login</button>
             </div>
+        </section>
+    )
 
-            <form className='space-y-4 md:space-y-6' onSubmit={handleSubmit_ForInputData}>
-                {/* Input Fields */}
-                <input type="email"
-                    name='email'
-                    placeholder="example@gmail.com"
-                    required
-                    className={inputStyling}
-                    value={formData.email}
-                    onChange={handleInput_onChange}
-                />
-                <input
-                    type="text"
-                    name='name'
-                    placeholder="name"
-                    required
-                    className={inputStyling}
-                    value={formData.name}
-                    onChange={handleInput_onChange}
-                />
-                <input
-                    type="password"
-                    name='password'
-                    placeholder="*******"
-                    required minLength={6}
-                    className={inputStyling}
-                    value={formData.password}
-                    onChange={handleInput_onChange}
-                />
-                {/* Sign Up Btn */}
-                <button type='submit'
-                    className='w-full bg-tertiary-light focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center'>Sign Up</button>
-            </form>
-
-            <button className='text-blue-700 underline' onClick={loginhandler}>Login</button>
-        </div>
-    </section>
 }
