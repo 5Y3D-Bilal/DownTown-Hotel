@@ -27,11 +27,9 @@ export default function RootLayout({
           <ToastContainer />
           <NextAuthProvider>
             <main className='font-normal'>
-              {/* Header */}
-              <Header />
+           
               {children}
-              {/* Footer */}
-              <Footer />
+           
             </main>
           </NextAuthProvider>
         </ThemeProvider>

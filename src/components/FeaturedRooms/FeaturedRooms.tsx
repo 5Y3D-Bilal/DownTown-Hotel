@@ -1,4 +1,4 @@
-import { Room } from '@/app/models/roon';
+import { Room } from '@/models/roon';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -35,11 +35,11 @@ const FeaturedRooms: React.FC<FeaturedRoomsProps> = ({ FeaturedRoom }) => {
                 <div className='flex mb-3 md:mb-0'>
                     <div className='flex gap-3 flex-col items-center justify-center mr-4'>
                         <p className='text-xs lg:text-xl text-center '>Start From</p>
-                        <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>$ {FeaturedRoom.price}</p>
+                        <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>${FeaturedRoom.price}</p>
                     </div>
                     <div className='flex gap-3 flex-col items-center justify-center mr-4'>
                         <p className='text-xs lg:text-xl text-center '>Discount</p>
-                        <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>$ {FeaturedRoom.discount}</p>
+                        <p className='md:font-bold flex font-medium text-lg xl:text-5xl'>${FeaturedRoom.discount}</p>
                     </div>
                 </div>
                 <Link href={`/rooms/${FeaturedRoom.slug.current}`} className='border h-fit text-center border-tertiary-dark text-tertiary-light px-3 py-2 lg:py-5 lg:px-7 rounded-2xl font-bold lg:text-xl'>More Details</Link> 
