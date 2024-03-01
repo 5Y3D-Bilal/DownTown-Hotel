@@ -15,7 +15,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
         </div>
 
         <div className='p-4 bg-white'>
-            <div className='flex justify-between text-2xl font-semibold'>
+            <div className='flex justify-between text-xl font-semibold'>
                 <p className=''>{room.name}</p>
                 <p className=''>${room.price}</p>
             </div>
