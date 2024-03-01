@@ -14,7 +14,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
             <Image src={room.coverImage.url} alt={room.name} width={250} height={250} className='img scale-animation' />
         </div>
 
-        <div className='p-4 bg-white'>
+        <div className='p-4 bg-[#f1f1f1] py-7 rounded-b-xl'>
             <div className='flex justify-between text-xl font-semibold'>
                 <p className=''>{room.name}</p>
                 <p className=''>${room.price}</p>

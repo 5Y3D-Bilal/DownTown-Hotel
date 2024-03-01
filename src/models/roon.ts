@@ -1,19 +1,19 @@
-type CoverImage = {
+export type CoverImage = {
   url: string;
 };
 
-type Image = {
+export type Image = {
   _key: string;
   url: string;
 };
 
-type Amenity = {
+export type Amenity = {
   _key: string;
   amenity: string;
   icon: string;
 };
 
-type Slug = {
+export type Slug = {
   _type: string;
   current: string;
 };
