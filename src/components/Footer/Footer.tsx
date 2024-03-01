@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
         </div>
         <div className='bg-tertiary-light h-10 md:h-[70px] mt-16 w-full bottom-0 left-0 flex items-center justify-center'>
-            <Link href={''} className='text-white'>Code by Bilal567</Link>
+            <Link href={'https://github.com/5Y3D-Bilal'} className='text-white'>Code by Bilal567</Link>
         </div>
     </footer>
 }
