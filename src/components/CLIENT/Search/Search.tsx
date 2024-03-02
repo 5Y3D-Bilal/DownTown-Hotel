@@ -25,7 +25,7 @@ const Search: React.FC<SearchProps> = ({ RoomTypeFilter, searchQuery, setRoomTyp
         router.push(`/rooms?roomType=${RoomTypeFilter}&searchQuery=${searchQuery}`)
     }
 
-    return <section className='bg-tertiary-dark px-4 py-6 rounded-lg'>
+    return <section className='bg-tertiary-dark px-4 py-6 mt-10'>
         <div className='container mx-auto flex gap-4 flex-wrap justify-between items-center'>
             <div className='w-full md:1/3 lg:w-auto mb-4 md:mb-0'>
                 <label className='block text-sm font-medium mb-2 text-white'>

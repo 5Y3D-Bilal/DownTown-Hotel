@@ -29,9 +29,22 @@ export type Room = {
   isFeatured: boolean;
   name: string;
   numberOfBeds: number;
-  offerAmenities: Amenity[];
+  offeredAmenities: Amenity[];
   price: number;
   slug: Slug;
   sepicalNote: string;
   type: string;
+  specialNote: string;
+};
+
+export type CreateBookingDto = {
+  user: string;
+  hotelRoom: string;
+  checkinDate: string;
+  checkoutDate: string;
+  numberOfDays: number;
+  adults: number;
+  children: number;
+  totalPrice: number;
+  discount: number;
 };
