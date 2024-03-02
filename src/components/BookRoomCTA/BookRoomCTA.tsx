@@ -145,7 +145,7 @@ const BookRoomCta: FC<Props> = props => {
       </div>
 
       {calcNoOfDays() > 0 ? (
-        <p className='mt-3'>Total Price: $ {calcNoOfDays() * discountPrice}</p>
+        <p className='mt-3'>Total Price: <small className="text-green-600">$</small> {calcNoOfDays() * discountPrice}</p>
       ) : (
         <></>
       )}
