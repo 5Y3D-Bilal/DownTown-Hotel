@@ -21,9 +21,9 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
             </div>
 
             <p className='pt-2 text-xs'>{room.type} Room</p>
-            <p className='pt-3 pb-6'>{room.description.slice(0,100)}...</p>
+            <p className='pt-3 pb-6'>{room.description.slice(0,60)}...</p>
 
-            <Link href={`/rooms/${room.slug.current}`} className='bg-primary inline-block text-center w-full py-4 rounded-xl text-white text-xl hover:-translate-y-2 hover:shadow-lg transition-all duration-500'>
+            <Link href={`/rooms/${room.slug.current}`} className={`${room.isBooked ? 'bg-[#072ABC] hover:cursor-not-allowed' : 'bg-primary'} inline-block text-center w-full py-4 rounded-xl text-white text-xl hover:-translate-y-2 hover:shadow-lg transition-all duration-500`}>
                 {room.isBooked ? "Booked" : "Book now!"}
             </Link>
         </div>

@@ -32,7 +32,7 @@ const booking = {
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "numberofDays",
+      name: "numberOfDays",
       title: "Number of days",
       type: "number",
       initialValue: 1,
