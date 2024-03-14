@@ -9,9 +9,7 @@ import useSWR from 'swr';
 import { signOut } from "next-auth/react"
 import Loading from '../../loading';
 
-
-
-const userDetails = (props: { params: { id: string } }) => {
+export default function userDetails(props: { params: { id: string } }) {
     // Getting User Id from params
     const { params: { id: userId } } = props
 
@@ -71,4 +69,3 @@ const userDetails = (props: { params: { id: string } }) => {
         </>
     )
 }
-export default userDetails;
